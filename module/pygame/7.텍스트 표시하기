@@ -1,0 +1,113 @@
+import pygame
+from pickle import TRUE
+import time
+
+
+#초기화
+pygame.init()
+
+#창 크기
+WINDOW_WIDTH=900
+WINDOW_HEIGHT=600
+
+
+#rgb 색상 기준으로 사용할 색깔 정의
+BLACK=(0,0,0)
+WHITE=(255,255,255)
+RED=(255,0,0)
+GREEN=(0,255,0)
+BLUE=(0,0,255)
+
+#백그라운드 색깔 설정
+
+#창 구현
+display_surface=pygame.display.set_mode((WINDOW_WIDTH,WINDOW_HEIGHT))
+
+#창 제목
+pygame.display.set_caption("game")
+
+clock = pygame.time.Clock()
+
+#이미지 붙이고 설정
+girl_image = pygame.image.load("C:\\Users\\maili\\OneDrive\\바탕 화면\\program\\pygame\\1.PNG")
+
+#이미지 위치 정보
+girl_rect=girl_image.get_rect()
+girl_rect.centerx = (WINDOW_WIDTH//2)
+girl_rect.bottom = (WINDOW_HEIGHT//2)
+#프로그램이 실행하게 함
+
+display_surface.fill(BLACK)
+
+
+
+
+#텍스트 객체 만들기
+system_font =pygame.font.SysFont('verdanai' ,30)
+#텍스트 내용
+game_font = system_font.render("Making Game" , True , GREEN ,BLACK)  
+#위치변수
+game_font_rect = game_font.get_rect()
+#크기와 위치
+game_font_rect.center =(WINDOW_WIDTH//2 , 100)
+ 
+
+
+
+running = TRUE
+
+
+
+#게임이 동작하는 동안 이벤트
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running =False
+    
+    
+    #키보드 이용
+    keys = pygame.key.get_pressed()
+    
+    if keys[pygame.K_LEFT] or keys[pygame.K_a] and girl_rect.left >0:
+        #왼쪽보다 클 경우만 작동한다 
+        girl_rect.x -=10
+    if keys[pygame.K_RIGHT] or keys[pygame.K_d] and girl_rect.right < WINDOW_WIDTH:
+        girl_rect.x +=10
+        
+    if keys[pygame.K_UP] or keys[pygame.K_w] and girl_rect.top > 0:
+        girl_rect.y -=10
+        
+    if keys[pygame.K_DOWN] or keys[pygame.K_s] and girl_rect.bottom < WINDOW_HEIGHT:
+        girl_rect.y +=10
+    
+    
+    if event.type == pygame.MOUSEBUTTONDOWN:  # 마우스 버튼을 클릭했을때
+        mouse_x = event.pos[0]      #x 좌표
+        mouse_y = event.pos[1]      #y 좌표
+        girl_rect.centerx = mouse_x #좌표 이미지에 적용
+        girl_rect.centery = mouse_y
+        
+    if event.type == pygame.MOUSEMOTION and event.buttons[0] == 1:
+       # 마우스가 움직일 때   event.buttons[0] == 1 마우스 버튼이[0] 왼쪽 [1]오른쪽 
+       # 왼쪽이 누르고 있을때
+        mouse_x = event.pos[0]
+        mouse_y = event.pos[1]
+        
+        girl_rect.centerx = mouse_x
+        girl_rect.centery = mouse_y    
+    
+        
+    display_surface.fill((0,0,0))
+    
+    display_surface.blit(girl_image , girl_rect)
+            
+    display_surface.blit(game_font , game_font_rect)        
+            
+    #디스플레이 업데이트
+    pygame.display.update()
+    
+    #60프레임
+    clock.tick(60)
+            
+pygame.quit()
+    
