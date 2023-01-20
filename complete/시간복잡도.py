@@ -42,7 +42,7 @@ class TimeComplexity():
         return result 
 
 
-if __name__ == '__main__'
+if __name__ == '__main__':
     # 오류 난다 >> 순환의 단점 메모리 부족
     # TimeComplexity().run(10000 ,TimeComplexity().factorial )
 
