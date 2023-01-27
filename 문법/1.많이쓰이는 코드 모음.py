@@ -11,7 +11,7 @@ print("%.2f, %.2f, %.2f" % (round(f, 2), round(g, 2), round(h, 2)))
 # a=list(map(int , input().split()))
 
 
-# 띄어 쓰기 없이 받기
+# 2중 리스트 받기
  mylist = [list(input()) for _ in range(8)]
 
 # 2차 행렬 반전 뒤집기
