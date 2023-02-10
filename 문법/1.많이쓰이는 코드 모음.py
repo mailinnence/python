@@ -384,7 +384,8 @@ print(lotto_generator())
 
 
 
-# 리스트로 도형
+# 리스트로 도형     
+---------------------------------------------
 def draw_stars(n):
     if n==1:
         return ['*']
@@ -402,4 +403,5 @@ def draw_stars(n):
     return L
 
 N=int(input())
-print('\n'.join(draw_stars(N)))
+print('\n'.join(draw_stars(N)))     
+---------------------------------------------
