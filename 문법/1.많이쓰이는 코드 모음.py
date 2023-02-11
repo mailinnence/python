@@ -17,7 +17,11 @@ print("%.2f, %.2f, %.2f" % (round(f, 2), round(g, 2), round(h, 2)))
 # 2차 행렬 반전 뒤집기
 mylist2 = list(map(list, (zip(*mylist))))
 
-
+# 리스트레 inpput
+>>> li=list([input()])
+a a a a a
+>>> li
+['a a a a a']
 
 
 #변수 한번에 넣기
