@@ -24,6 +24,13 @@ a a a a a
 ['a a a a a']
 
 
+# 범위 조건
+text="abcde"
+if "d" in text[2:]: print("exist")
+   
+   
+   
+
 #변수 한번에 넣기
 a,b=map(int , input().split())
 
