@@ -24,6 +24,11 @@ mylist2 = list(map(list, (zip(*mylist))))
 a,b=map(int , input().split())
 
 
+# 리스트를 입력처럼 보여줌
+list=[1,2,3,4,5]
+print(*list)
+
+>>> 1 2 3 4 5
 
 
 
