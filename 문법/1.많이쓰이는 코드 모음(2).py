@@ -25,3 +25,33 @@ lst.sort(key = len)
 
 
 
+
+
+
+
+# 리스트에 튜플 넣기
+
+'''
+3
+21 Junkyu
+21 Dohyun
+20 Sunyoung
+'''
+
+n = int(input())
+
+ls = []
+for _ in range(n):
+    age, name = map(str, input().split())
+    age = int(age)
+    ls.append((age, name))
+
+print(ls)
+
+'''
+[(21, 'Junkyu'), (21, 'Dohyun'), (20, 'Sunyoung')]
+'''
+
+
+
+
