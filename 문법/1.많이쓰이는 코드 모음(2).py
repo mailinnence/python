@@ -79,3 +79,22 @@ sorted_list = sorted(리스트,key=lambda x: a)
 arr2 = ["a","b","c","d","e","f"]
 dic = {arr2[i] : i for i in range(len(arr2))}
 print(dic)
+
+
+
+
+
+
+
+
+
+
+# 교집합
+a = set()
+a.add(1); a.add(2); a.add(3); a.add(4)
+
+b = set()
+b.add(3); b.add(4); b.add(5); b.add(6)
+
+print(list(a & b))
+
