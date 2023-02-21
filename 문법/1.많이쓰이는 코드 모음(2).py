@@ -98,3 +98,6 @@ b.add(3); b.add(4); b.add(5); b.add(6)
 
 print(list(a & b))
 
+'''
+[3, 4]
+'''
