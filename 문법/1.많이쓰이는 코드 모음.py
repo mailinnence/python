@@ -1,9 +1,18 @@
 #유용한 코딩
 
+
+# 시간 초과 방지
 '''
 input = sys.stdin.readline()은 표준 입력에서 한 줄을 읽어와 input 변수에 할당하는 것을 의미합니다. 
 이를 통해 표준 입력을 더욱 빠르게 처리할 수 있습니다. 이 방법은 입력이 많은 경우 일반적인 input() 함수보다 빠르게 동작합니다.
 '''
+n=int(input())
+
+import sys
+n=int(sys.stdin.readline()) # 더 빠르다... 
+
+
+
 
 
 # 반올림
