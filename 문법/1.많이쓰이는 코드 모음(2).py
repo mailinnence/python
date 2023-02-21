@@ -72,3 +72,10 @@ sorted_list = sorted(리스트,key=lambda x: a)
 
 
 
+
+
+
+# 딕션너리 순서대로 넣기
+arr2 = ["a","b","c","d","e","f"]
+dic = {arr2[i] : i for i in range(len(arr2))}
+print(dic)
