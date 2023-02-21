@@ -1,4 +1,3 @@
-
 # 카운트 함수
 # 리스트에서 최빈값을 구할 수 있는 함수
 from collections import Counter
@@ -16,6 +15,13 @@ print(f"최빈값 {cnt_li[0][0]} 횟수 {cnt_li[0][1]}")
 print(f"최소빈값 {cnt_li[-1][0]} 횟수 {cnt_li[-1][1]}")
 
 
+
+
+
+
+# 리스트 길이 순으로 정렬... 파이썬은 참...하다
+lst.sort()
+lst.sort(key = len)
 
 
 
