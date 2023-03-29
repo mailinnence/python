@@ -1,0 +1,26 @@
+#module 과 pip 에 대해서
+
+#cmd에서 pip freeze 하면 다운로드 된 모듈들 확인 가능하며
+#설치오류 난다면  1.pip install --upgrade pip 업그레이드 하고
+                       2.python -m pip install [설치하고자 하는 모듈] 
+
+#	한가지 알아야하는 것이 cmd의 microsoft 앱에서 다운받은 프로그램의 pip와 
+	eclipse 같은 프로그램에다 다운로드 받은 pip는 
+	동일한 것이 아니라는 것을 알아야한다 그래서 각기 pip에 다운로드 받아야 한다.
+	
+	cmd 에서
+	pip install --upgrade pip
+	python -m pip install [설치하고자 하는 모듈]
+	하면 cmd의 microsoft 앱에서 다운받은 프로그램의 pip 에 설치되어 cmd 에서 설치된 모든 프로그램에 적용되며
+	
+	두개 다 할 것!!!!
+	cmd 에서 
+	드라이브\파일\pip가 있는 파일> pip install --upgrade pip
+	ex)
+	cd C:\Users\tjdalsdn00\Desktop\program\python(cmd_ver) > pip install --upgrade pip 
+	
+	드라이브\파일\pip가 있는 파일> python -m pip install [설치하고자 하는 모듈]
+	ex)
+	cd C:\Users\tjdalsdn00\Desktop\program\python(cmd_ver) > python -m pip install [설치하고자 하는 모듈]
+
+	하면 해당 프로그램에 설치되어 외부 프로그램(eclipse,visual studio등등) 에서 사용 가능하다

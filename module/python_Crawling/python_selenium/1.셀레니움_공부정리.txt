@@ -1,0 +1,81 @@
+셀레니움 공부파일 구 버전
+------------------------------------------------------구버전-------------------------------------------------------------------------------------------------------
+#1.셀레니움을 가져오고 각종 연동할 모듈을 부른다
+#2월 12일 크롬드라이버의 위치     'C://Users//tjdalsdn00//Desktop//chromedriver.exe'
+
+import selenium                                                                      #셀레니움을 가져온다
+from selenium import webdriver                                                 #크롬 드라이브랑 연동 
+from selenium.webdriver.common.keys import Keys                        #각종 연동 모듈
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+import time                                                                            #셀레니움은 보안상 문제를 가져오기 떄문에 시간조정으로 막아놓는 경우가 있어 시간 모듈을 사용한다
+import pyperclip                                                                      #셀레니움은 보안상 문제를 가져오기 떄문에 입력조정으로 막아놓는 경우가 있어 복사 붙이기 모듈을 사용한다
+
+driver = webdriver.Chrome("C://Users//tjdalsdn00//Desktop//chromedriver.exe")         #크롬드라이버를 변수에 가져온다
+driver.get('https://www.naver.com/')                                                                   #변수를 실행한다 get
+
+------------------------------------------------------구버전-------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+------------------------------------------------------신버전 2021-06-24-----------------------------------------------------------------------------------------------------
+
+1.pip install --upgrade pip 업그레이드 하고
+2.python -m pip install [설치하고자 하는 모듈]------selenium,webdriver-manager
+
+pip install --upgrade pip 
+python -m pip install selenium
+python -m pip install webdriver-manager
+
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+import time
+driver = webdriver.Chrome(ChromeDriverManager().install()) #드라이버 실행
+
+#1.접속
+driver.get('https://www.instagram.com/')
+driver.execute_script('window.open("https://naver.com");')                                     #새 탭으로 열기
+time.sleep(3)                                                                                  #로그인하는 사이에 코드가 진행 되기 때문에 잠깐 쉬어주어야 한다
+  
+
+------------------------------------------------------신버전-------------------------------------------------------------------------------------------------------
+
+
+
+
+#2.클릭 방법
+Search = driver.find_element_by_name('query')                                #변수를 만들고 크롬드라이버를 가져온 변수를 find_element_by_name("클릭위치 F12로 찾을 수 있다")라는 함수를 사용   #by_찾는 곳_name
+Search.click()                                                                              #버튼 함수로 클릭을 실행한다
+
+Search = driver.find_element_by_xpath(' ')                                   #크롬드라이버를 가져온 변수에 xpath를 이용한다 
+Search.click()           #send_Keys(Keys.ENTER) 이것도 가능              #버튼 함수로 클릭을 실행한다
+
+#3.내용 입력 방법
+Search.send_keys("입력할 내용")                                                   #클릭한 변수를 send_keys("입력할 내용") 내용을 입력해줍니다
+Search.submit()                                                                         #submit()으로 활설화 해줍니다
+
+
+
+
+pw.submit() 
+와
+Search = driver.find_element_by_xpath('/html/body/div/div/div/div/form/input[4]')  
+        Search.click() 
+의 차이 정리
+
+
+
+
+
+
+
+
+

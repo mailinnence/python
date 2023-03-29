@@ -1,0 +1,77 @@
+
+
+import selenium
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+driver = webdriver.Chrome('C://Users//tjdalsdn00//Desktop//chromedriver.exe')
+driver.get(url='https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com')
+naver_login_id=driver.find_element_by_name('id')
+naver_login_pw=driver.find_element_by_name('pw')
+naver_login_id.clear()
+time.sleep(1)
+naver_login_id.send_keys("dhkd2614")
+naver_login_pw.send_keys("qwe125!!")
+naver_login_pw.submit()
+time.sleep(3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+import pyperclip
+driver = webdriver.Chrome("C://Users//tjdalsdn00//Desktop//chromedriver.exe")
+driver.get('https://www.naver.com/')
+
+login_btn = driver.find_element_by_class_name("link_login")    #by_찾는 곳_name
+login_btn.click()
+time.sleep(1)
+
+# id, pw 입력할 곳을 찾습니다.
+tag_id = driver.find_element_by_name('id')
+tag_pw = driver.find_element_by_name('pw')
+tag_id.clear()
+time.sleep(1)
+
+# id 입력
+tag_id.click()
+pyperclip.copy('dhkd2614')
+tag_id.send_keys(Keys.CONTROL, 'v')
+time.sleep(1)
+
+# pw 입력
+tag_pw.click()
+pyperclip.copy('qwe125!!')
+tag_pw.send_keys(Keys.CONTROL, 'v')
+time.sleep(1)
+
+# 로그인 버튼을 클릭합니다
+login_btn = driver.find_element_by_id('log.login')
+login_btn.click()
+
+
+
+
+
