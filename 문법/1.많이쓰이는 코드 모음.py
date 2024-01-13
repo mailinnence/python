@@ -152,6 +152,23 @@ print(' '.join(map(str, li)))
 
 
 
+# 한줄씩 받기
+N = int(input())
+N_list = [int(input()) for _ in range(N)]
+
+'''
+ex) 
+--------------
+3
+10
+20
+40
+--------------
+
+
+'''
+
+
 
 #모든 경우의 수를 만들기
 import itertools
