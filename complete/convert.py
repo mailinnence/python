@@ -21,8 +21,8 @@ def convert_videos_to_wav(input_folder, output_folder):
 
 
 # 입력 폴더와 출력 폴더 경로 설정
-input_folder = "C:\\Users\\maili\\OneDrive\\바탕 화면\\새 폴더"
-output_folder = "C:\\Users\\maili\\OneDrive\\바탕 화면\\새 폴더2"
+input_folder = "C:\\Users\\user\\OneDrive\\바탕 화면\\새 폴더"
+output_folder = "C:\\Users\\user\\OneDrive\\바탕 화면\\새 폴더2"
 
 # 영상 파일을 WAV로 변환
 convert_videos_to_wav(input_folder, output_folder)
