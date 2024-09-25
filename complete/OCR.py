@@ -4,6 +4,9 @@ from PIL import Image
 import pytesseract
 from tkinter import filedialog, messagebox
 
+# os 에 맞게 다운받을 것
+# https://github.com/UB-Mannheim/tesseract/wiki
+
 # 라이브러리 자동 설치 ---------------------------------------------
 try:
     import pytesseract
